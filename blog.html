@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- for nav -->
+    <link rel="stylesheet" href="style.css">
+      <!-- icon cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #content {
+            max-height: 100px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            display: none;
+        }
+
+        /* .welfare {
+            display: inline;
+        } */
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo"><img src="iXSqNF.png" alt="" height="100px"></a>
+          <ul class="nav-menu">
+            <ul class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </ul>
+            <ul class="nav-item">
+              <a href="blog.html" class="nav-link">Blog</a>
+            </ul>
+            <ul class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </ul>
+            <ul class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </ul>
+    
+          </ul>
+          <button class="mlog" onclick="Signup()">Signup</button>
+          <!-------------------------------------------
+                            for mobile
+               -------------------------------------------->
+          <div class="mobile">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+    
+      </header>
+        <!------------------------------ 
+                    form
+      ---------------------------->
+    
+    
+      <div class="box " id="myForm">
+        <div id="login">
+          <button class="closeForm" onclick="closeForm()"><img src="cross.png" alt="" height="25px" width="25px"></button>
+    
+          <h2 class="heading">LOGIN</h2>
+          <form action="" class="form-container">
+    
+            <div class="inputDiv">
+              <label for="email" class="email">Email</label>
+              <div class="userArea">
+                <i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" id="email"
+                  placeholder="Type your Email-Id" required>
+              </div>
+              <hr>
+            </div>
+            <div class="inputDiv">
+              <label for="password" class="username">Password</label>
+              <div class="userArea">
+                <i class="fa-solid fa-key"></i><input type="password" name="password" id="password"
+                  placeholder="Type your password" required>
+              </div>
+              <hr>
+            </div>
+    
+            <span class="forgotPassword">Forgot password?</span>
+            <button class="btn" type="submit">Login</button>
+            <hr>
+            <div class="formBottom">
+              <p> login using</p>
+              <ul class="account">
+                <a href="" target="_blank">
+                  <li><i class="fa-brands fa-facebook-f"></i></li>
+                </a>
+                <a href="" target="_blank">
+                  <li><i class="fa-brands fa-twitter"></i></li>
+                </a>
+                <a href="https://www.google.com/" target="_blank">
+                  <li><i class="fa-brands fa-google"></i></li>
+                </a>
+              </ul>
+              <p class="signUp">Don't have account</p>
+              <a href="sign.html" target="_self" onclick="signin()">SIGN UP</a>
+            </div>
+    
+    
+          </form>
+        </div>
+      </div>
+    <div>
+        <h1>our mission</h1>
+    </div>
+    <div class="welfare">
+        <div class="crd" style="width: 26rem; border: 2px solid black;">
+            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1676274365/website-images/dynamic/b0abff1d-a3f9-49a7-9d58-273bbc735561.jpg"
+                class="card-img" alt="provide food" height="300px">
+            <div class="card-body">
+                <h3 class="card-title">TO PrOVide fOOD</h3>
+                <p class="card-text">our mission is to provide food 1000ns of hungers of pakistan</p>
+                <!-- <button onclick="readmore()">read more</button> -->
+            </div>
+
+
+
+
+            <div class="crd" style="width: 26rem; border: 2px solid black;">
+                <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646141210/website-images/static/6.jpg"
+                    class="card-img" alt="provide food" height="300px">
+                <div class="card-body">
+                    <h3 class="card-title">TO PROVIDE EDUCATION</h3>
+                    <p class="card-text">our mission is to provide equcation 1000ns of childrens of pakistan</p>
+                    <!-- <button onclick="readmore()">read more</button> -->
+                </div>
+                <!-- <div id="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto quia. Error?
+        </div> -->
+            </div>
+
+            <div class="crd" style="width: 26rem; border: 2px solid black;">
+                <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
+                    class="card-img" alt="provide food" height="300px">
+                <div class="card-body">
+                    <h3 class="card-title">TO PROVIDE HEALTHCARE</h3>
+                    <p class="card-text">our mission is to provide healthcare 1000ns of childrens of pakistan</p>
+                    <!-- <button onclick="readmore()">read more</button> -->
+                </div>
+
+            </div>
+
+            <div class="crd" style="width: 28rem; border: 2px solid black;">
+                <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646497311/website-images/static/24.jpg"
+                    class="card-img" alt="provide food" height="300px">
+                <div class="card-body">
+                    <h3 class="card-title">TO TEACH SKILL</h3>
+                    <p class="card-text">our mission is to teach skill 1000ns of childrens of pakistan</p>
+                    <!-- <button onclick="readmore()">read more</button> -->
+                </div>
+            </div>
+        </div>
+        <div style="background-color: rgb(77, 75, 75);"></div>
+        <div style="width: 30rem; border: 2px solid black;">
+            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1648318863/website-images/static/95.jpg"
+                alt class="testimonial_image" height="300px">
+
+            <h4 class="ant-typography heading_english undefined">Arshad Wali Muhammad</h4>
+            <span class="ant-typography text_english theme_grey_light">"("
+                "Group Director, Gerry’s Group" ")"
+            </span><br>
+
+            <span class="ant-typography text_english normal_text">Saylani Welfare Trust is a name that needs no
+                introduction
+                today. The journey this team embarked upon was made possible owing to their zeal, enthusiasm &
+                commitment to
+                the society and by the grace of Allah (SWT), it has become a name that we need and not just the one
+                we want.
+                I wish Saylani’s team all the success and blessing that they deserve for future, May God bless
+                Saylani and
+                ensure prosperity and happiness for our people, Ameen!</span>
+        </div>
+</div>
+        
+    <!--------------------------------------
+         start of footer
+    ----------------------------------------->
+
+    <div class="footer-section">
+        <div>
+          <img src="iXSqNF.png" alt="">
+        </div>
+        <div class="footer-item">
+            <h2>Company</h2>
+            <p><a href=""> About Us</a></p>
+            <p><a href=""> Contact Us</a></p>
+            <p><a href=""> Our Services</a></p>
+            <p><a href=""> Privacy Policy</a></p>
+        </div>
+        <div class="footer-item">
+            <h2>Get Help </h2>
+            <p><a href=""> FAQ</a></p>
+            <p><a href=""> Shipping </a></p>
+            <p><a href=""> Retuns </a></p>
+            <p><a href=""> Payment Options </a></p>
+        </div>
+        <div class="footer-item">
+            <h2>Online Shop</h2>
+            <p><a href=""> Blogs </a></p>
+            <p><a href=""> Watch </a></p>
+            <p><a href=""> Shoes </a></p>
+            <p><a href=""> Bress </a></p>
+        </div>
+        <div class="footer-item social">
+            <h2> Follow Us </h2>
+            <ul>
+                <li> <i class="fa-brands fa-instagram"></i> </li>
+                <li> <i class="fa-brands fa-linkedin-in"></i> </li>
+                <li> <i class="fa-brands fa-youtube"></i> </li>
+                <li> <i class="fa-brands fa-twitter"></i> </li>
+            </ul>
+        </div>
+    </div>
+    <!---------------------------------------
+                 end of footer 
+    -------------------------------------->
+
+
+        <script>
+            function readmore() {
+                document.getElementById(content).style.display = "block"
+            }
+
+        </script>
+
+
+<!-- for nav -->
+<script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search-Filter</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- icon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .about {
+            font-size: 20px;
+            border: 2px solid black;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo"><img src="iXSqNF.png" alt="" height="100px"></a>
+            <ul class="nav-menu">
+                <ul class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </ul>
+                <ul class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </ul>
+                <ul class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </ul>
+                <ul class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </ul>
+
+            </ul>
+            <button class="mlog" onclick="Signup()">Signup</button>
+            <!-------------------------------------------
+                        for mobile
+           -------------------------------------------->
+            <div class="mobile">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+    </header>
+
+    <!------------------------------ 
+                form
+  ---------------------------->
+
+
+    <div class="box " id="myForm">
+        <div id="login">
+            <button class="closeForm" onclick="closeForm()"><img src="cross.png" alt="" height="25px"
+                    width="25px"></button>
+
+            <h2 class="heading">LOGIN</h2>
+            <form action="" class="form-container">
+
+                <div class="inputDiv">
+                    <label for="email" class="email">Email</label>
+                    <div class="userArea">
+                        <i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" id="email"
+                            placeholder="Type your Email-Id" required>
+                    </div>
+                    <hr>
+                </div>
+                <div class="inputDiv">
+                    <label for="password" class="username">Password</label>
+                    <div class="userArea">
+                        <i class="fa-solid fa-key"></i><input type="password" name="password" id="password"
+                            placeholder="Type your password" required>
+                    </div>
+                    <hr>
+                </div>
+
+                <span class="forgotPassword">Forgot password?</span>
+                <button class="btn" type="submit">Login</button>
+                <hr>
+                <div class="formBottom">
+                    <p> login using</p>
+                    <ul class="account">
+                        <a href="" target="_blank">
+                            <li><i class="fa-brands fa-facebook-f"></i></li>
+                        </a>
+                        <a href="" target="_blank">
+                            <li><i class="fa-brands fa-twitter"></i></li>
+                        </a>
+                        <a href="https://www.google.com/" target="_blank">
+                            <li><i class="fa-brands fa-google"></i></li>
+                        </a>
+                    </ul>
+                    <p class="signUp">Don't have account</p>
+                    <a href="sign.html" target="_self" onclick="signin()">SIGN UP</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div>
+
+        <div class="bout">
+            <h1>ABOUT US</h1>
+            <img src="" alt="">
+        </div>
+       <p> Welcome to SMIT store, where our journey began with a passion for giving you the best product
+        . Founded in 2024, we embarked on a mission to make your life happy and save .
+    
+            The spark that ignited SMIT came from [briefly explain the inspiration behind starting the
+            business]. Fueled by the desire to save your life and time, we set out
+            to create more than just a brand – we wanted to build a community, a space where you get all kinds of access .
+        </p>
+        <div>
+
+        </div>
+
+        <!--------------------------------------
+         start of footer
+    ----------------------------------------->
+
+        <div class="footer-section">
+            <div>
+                <img src="iXSqNF.png" alt="">
+            </div>
+            <div class="footer-item">
+                <h2>Company</h2>
+                <p><a href=""> About Us</a></p>
+                <p><a href=""> Contact Us</a></p>
+                <p><a href=""> Our Services</a></p>
+                <p><a href=""> Privacy Policy</a></p>
+            </div>
+            <div class="footer-item">
+                <h2>Get Help </h2>
+                <p><a href=""> FAQ</a></p>
+                <p><a href=""> Shipping </a></p>
+                <p><a href=""> Retuns </a></p>
+                <p><a href=""> Payment Options </a></p>
+            </div>
+            <div class="footer-item">
+                <h2>Online Shop</h2>
+                <p><a href=""> Blogs </a></p>
+                <p><a href=""> Watch </a></p>
+                <p><a href=""> Shoes </a></p>
+                <p><a href=""> Bress </a></p>
+            </div>
+            <div class="footer-item social">
+                <h2> Follow Us </h2>
+                <ul>
+                    <li> <i class="fa-brands fa-instagram"></i> </li>
+                    <li> <i class="fa-brands fa-linkedin-in"></i> </li>
+                    <li> <i class="fa-brands fa-youtube"></i> </li>
+                    <li> <i class="fa-brands fa-twitter"></i> </li>
+                </ul>
+            </div>
+        </div>
+        <!---------------------------------------
+                 end of footer 
+    -------------------------------------->
+
+        <script src="index.js"></script>
+</body>
+
+</html>

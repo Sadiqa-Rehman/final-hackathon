@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMIT store</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- icon cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo"><img src="iXSqNF.png" alt="" height="100px"></a>
+      <ul class="nav-menu">
+        <ul class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </ul>
+        <ul class="nav-item">
+          <a href="blog.html" class="nav-link">Blog</a>
+        </ul>
+        <ul class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </ul>
+        <ul class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </ul>
+
+      </ul>
+      <button class="mlog" onclick="Signup()">Signup</button>
+      <!-------------------------------------------
+                        for mobile
+           -------------------------------------------->
+      <div class="mobile">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+  </header>
+
+  <!------------------------------ 
+                form
+  ---------------------------->
+
+
+  <div class="box " id="myForm">
+    <div id="login">
+      <button class="closeForm" onclick="closeForm()"><img src="cross.png" alt="" height="25px" width="25px"></button>
+
+      <h2 class="heading">LOGIN</h2>
+      <form action="" class="form-container">
+
+        <div class="inputDiv">
+          <label for="email" class="email">Email</label>
+          <div class="userArea">
+            <i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" id="email"
+              placeholder="Type your Email-Id" required>
+          </div>
+          <hr>
+        </div>
+        <div class="inputDiv">
+          <label for="password" class="username">Password</label>
+          <div class="userArea">
+            <i class="fa-solid fa-key"></i><input type="password" name="password" id="password"
+              placeholder="Type your password" required>
+          </div>
+          <hr>
+        </div>
+
+        <span class="forgotPassword">Forgot password?</span>
+        <button class="btn" type="submit">Login</button>
+        <hr>
+        <div class="formBottom">
+          <p> login using</p>
+          <ul class="account">
+            <a href="" target="_blank">
+              <li><i class="fa-brands fa-facebook-f"></i></li>
+            </a>
+            <a href="" target="_blank">
+              <li><i class="fa-brands fa-twitter"></i></li>
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+              <li><i class="fa-brands fa-google"></i></li>
+            </a>
+          </ul>
+          <p class="signUp">Don't have account</p>
+          <a href="sign.html" target="_self" onclick="signin()">SIGN UP</a>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- cart Screen -->
+  <div class="cart" id="cart">
+
+    <div class="cart-head">
+      <h3 class="closeBtn" onclick="closeBtn()">x</h3>
+      <center>
+        <h1>my Cart</h1>
+      </center>
+    </div>
+
+    <div class="cart-body" id="cart-body">
+      <center>your cart is empty...</center>
+    </div>
+
+    <div class="cart-footer">
+      <center>Total Price: <span id="cartTotal">0</span> PKR</center>
+      <center><button class="btn" onclick="clearCart()">pay</button></center>
+    </div>
+
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">SearchFilter</div>
+
+    <input type="text" class="search-input" placeholder="Search..." oninput="handleSearch(this.value)" />
+    <b class="carticn" onclick="toggleCart()"><img src="cart pic.jpg" alt="" height="50px" width="30px"> <span
+        id="cartLength" style="background-color: antiquewhite;"> 0</span></b>
+  </div>
+
+  <!-- slider start -->
+
+   <div class="slider-container">
+    <div class="slides">
+      <div class="slide"><img src="https://i.pinimg.com/736x/41/c0/32/41c0321a71f6f609c1acfc15d77678be.jpg" height="300px"  
+          alt="Image 1"></div>
+      <div class="slide"><img src="https://cdn.britannica.com/35/222035-050-C68AD682/makeup-cosmetics.jpg" height="300px"  alt=""></div>
+      <div class="slide"><img
+          src="https://media.gq.com/photos/646fdd946cbe43aa644cd88b/16:9/w_1280,c_limit/shoes-art.jpg" height="300px"  alt="Image 3">
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+  </div> 
+  <!-- slider end -->
+  <div class="div">
+    <div class="parent-div firstcircle">
+      <img src="https://www.olx.com.pk/assets/mobiles.8c768c96bfde33f18fcf5af2a8b9cf71.png" alt="Image 1"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/vehicles.29fb808d5118f0db56f68a39ce5392e2.png" alt="Image 2"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/property-for-sale.e3a00dbfdaa69fe5f713665f1069502f.png" alt="Image 3"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/property-for-rent.8436595fbaa90d47f0178006f57090a8.png" alt="Image 4"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/electronics-home-appliances.46e034dd8adca44625c2c70e4d1b5984.png"
+        alt="Image 5" class="circle-image">
+    </div>
+    <div class="parent-div secondcircle">
+      <img src="https://www.olx.com.pk/assets/services.dc6aef196c0403dc61b0ee813f66fa5b.png" alt="Image 1"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/jobs.79e6136dda02111cf8e7afe26b9e0f93.png" alt="Image 2"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/furniture-home-decor.66bcf157a53ea4c736a5b0af41219475.png" alt="Image 3"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/fashion-beauty.dd2cf7638c29b0e5c084a6673dd94dd7.png" alt="Image 4"
+        class="circle-image">
+      <img src="https://www.olx.com.pk/assets/kids.cd8d8864804f1c35dd6a7df68268a48d.png" alt="Image 5"
+        class="circle-image">
+    </div>
+  </div>
+  <div class="product-section" id="productSection">
+
+  </div>
+
+
+  <!--------------------------------------
+         start of footer
+    ----------------------------------------->
+
+  <div class="footer-section">
+    <div>
+      <img src="iXSqNF.png" alt="">
+    </div>
+    <div class="footer-item">
+      <h2>Company</h2>
+      <p><a href=""> About Us</a></p>
+      <p><a href=""> Contact Us</a></p>
+      <p><a href=""> Our Services</a></p>
+      <p><a href=""> Privacy Policy</a></p>
+    </div>
+    <div class="footer-item">
+      <h2>Get Help </h2>
+      <p><a href=""> FAQ</a></p>
+      <p><a href=""> Shipping </a></p>
+      <p><a href=""> Retuns </a></p>
+      <p><a href=""> Payment Options </a></p>
+    </div>
+    <div class="footer-item">
+      <h2>Online Shop</h2>
+      <p><a href=""> Blogs </a></p>
+      <p><a href=""> Watch </a></p>
+      <p><a href=""> Shoes </a></p>
+      <p><a href=""> Bress </a></p>
+    </div>
+    <div class="footer-item social">
+      <h2> Follow Us </h2>
+      <ul>
+        <li> <i class="fa-brands fa-instagram"></i> </li>
+        <li> <i class="fa-brands fa-linkedin-in"></i> </li>
+        <li> <i class="fa-brands fa-youtube"></i> </li>
+        <li> <i class="fa-brands fa-twitter"></i> </li>
+      </ul>
+    </div>
+  </div>
+  <!---------------------------------------
+               end of footer 
+  -------------------------------------->
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
