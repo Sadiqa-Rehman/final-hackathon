@@ -14,9 +14,18 @@
 
     <style>
         .about {
-            font-size: 20px;
+            /* font-size: 20px;
             border: 2px solid black;
-            padding: 30px;
+            padding: 30px; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
+            margin-top: 50px;
+        }
+
+        #faltu {
+            display: none;
         }
     </style>
 </head>
@@ -107,22 +116,87 @@
             </form>
         </div>
     </div>
-
+    <!------------------------------ 
+                form end
+  ---------------------------->
     <div>
+        <div class="amain">
 
-        <div class="bout">
-            <h1>ABOUT US</h1>
-            <img src="" alt="">
-        </div>
-       <p> Welcome to SMIT store, where our journey began with a passion for giving you the best product
-        . Founded in 2024, we embarked on a mission to make your life happy and save .
-    
-            The spark that ignited SMIT came from [briefly explain the inspiration behind starting the
-            business]. Fueled by the desire to save your life and time, we set out
-            to create more than just a brand – we wanted to build a community, a space where you get all kinds of access .
-        </p>
-        <div>
+            <div class="about">
+                <h1>ABOUT US</h1>
+                <img src="PlaSep12.jpg" alt="" height="500px">
+            </div>
+            <p> Welcome to SMIT store, where our journey began with a passion for giving you the best product
+                . Founded in 2024, we embarked on a mission to make your life happy and save .
 
+                The spark that ignited SMIT came from [briefly explain the inspiration behind starting the
+                business]. Fueled by the desire to save your life and time, we set out
+                to create more than just a brand – we wanted to build a community, a space where you get all kinds of
+                acces
+            </p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae at, necessitatibus delectus architecto non
+                beatae exercitationem omnis eos repellat, cupiditate impedit maiores nulla itaque incidunt sapiente quod
+                vero voluptatibus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit exercitationem
+                voluptatem
+                suscipit sit ullam voluptas amet molestiae ipsum temporibus ad iusto in quos accusamus consequuntur
+                dolor
+                sunt, magni eveniet nam. </p>
+            <button id="rm" class="btn" onclick="rm()">Read more</button>
+
+            <div id="faltu">
+                <img src="https://www.shutterstock.com/image-photo/shopping-online-concept-parcel-paper-260nw-1318209509.jpg"
+                    alt="">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus iusto modi dolore debitis esse cum
+                    explicabo et animi minima quis ullam, accusamus iste? Mollitia architecto totam aperiam corrupti
+                    libero
+                    asperiores nostrum omnis, cupiditate obcaecati ex eaque, rerum nam? Cum in ratione neque fugit
+                    commodi,
+                    nobis quam minus error, sapiente illo hic vel deleniti eaque odio ipsum id placeat non illum? Ut
+                    molestias
+                    suscipit totam magnam dolor eius incidunt fuga asperiores ipsa ratione aspernatur porro mollitia
+                    dolores
+                    saepe esse quia, rem deleniti quasi deserunt quod nostrum consequuntur excepturi voluptatibus
+                    repellendus.
+                    Explicabo pariatur at vero facere quas! Libero praesentium veniam doloremque eaque?
+                </p>
+
+                <img src="https://thumbs.dreamstime.com/b/e-commerce-online-shopping-digital-marketing-sales-business-technology-concept-137074336.jpg"
+                    alt="" height="500px">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus iusto modi dolore debitis esse cum
+                    explicabo et animi minima quis ullam, accusamus iste? Mollitia architecto totam aperiam corrupti
+                    libero
+                    asperiores nostrum omnis, cupiditate obcaecati ex eaque, rerum nam? Cum in ratione neque fugit
+                    commodi,
+                    nobis quam minus error, sapiente illo hic vel deleniti eaque odio ipsum id placeat non illum? Ut
+                    molestias
+                    suscipit totam magnam dolor eius incidunt fuga asperiores ipsa ratione aspernatur porro mollitia
+                    dolores
+                    saepe esse quia, rem deleniti quasi deserunt quod nostrum consequuntur excepturi voluptatibus
+                    repellendus.
+                    Explicabo pariatur at vero facere quas! Libero praesentium veniam doloremque eaque?
+                </p>
+
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus iusto modi dolore debitis esse cum
+                    explicabo et animi minima quis ullam, accusamus iste? Mollitia architecto totam aperiam corrupti
+                    libero
+                    asperiores nostrum omnis, cupiditate obcaecati ex eaque, rerum nam? Cum in ratione neque fugit
+                    commodi,
+                    nobis quam minus error, sapiente illo hic vel deleniti eaque odio ipsum id placeat non illum? Ut
+                    molestias
+                    suscipit totam magnam dolor eius incidunt fuga asperiores ipsa ratione aspernatur porro mollitia
+                    dolores
+                    saepe esse quia, rem deleniti quasi deserunt quod nostrum consequuntur excepturi voluptatibus
+                    repellendus.
+                    Explicabo pariatur at vero facere quas! Libero praesentium veniam doloremque eaque?
+
+                </p>
+                <br>
+                <button id="ls" class="btn" onclick="ls()">show less</button>
+            </div>
         </div>
 
         <!--------------------------------------
@@ -168,6 +242,16 @@
                  end of footer 
     -------------------------------------->
 
+        <script>
+            function rm() {
+                document.getElementById("faltu").style.display = "block"
+                document.getElementById("rm").style.display = "none"
+            }
+            function ls() {
+                document.getElementById("faltu").style.display = "none"
+                document.getElementById("rm").style.display = "block"
+            }
+        </script>
         <script src="index.js"></script>
 </body>
 
