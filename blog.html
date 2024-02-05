@@ -2,239 +2,398 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- for nav -->
-    <link rel="stylesheet" href="style.css">
-      <!-- icon cdn -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blog/smit-store</title>
+  <!-- for nav -->
+  <link rel="stylesheet" href="style.css">
+  <!-- icon cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        #content {
-            max-height: 100px;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            display: none;
-        }
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .welfaret {
+      /* display: flex; */
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+      row-gap: 20px;
+      margin-top: 50px;
 
-        /* .welfare {
-            display: inline;
-        } */
-    </style>
+    }
+
+    .crd {
+
+      display: inline-block;
+      border: 2px rgb(179, 177, 177);
+      width: 300px;
+      height: 400px;
+      margin-right: 20px;
+      box-sizing: border-box;
+      vertical-align: top;
+    }
+
+    .card-img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    #edu,
+    #con,
+    #noc,
+    #non,
+    #view {
+      display: none;
+    }
+
+    #view {
+      padding-top: 15px;
+    }
+
+    /* .card-text{
+  text-align: center;
+} */
+
+  </style>
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar">
-          <a href="index.html" class="nav-logo"><img src="iXSqNF.png" alt="" height="100px"></a>
-          <ul class="nav-menu">
-            <ul class="nav-item">
-                <a href="index.html" class="nav-link">Home</a>
-              </ul>
-            <ul class="nav-item">
-              <a href="blog.html" class="nav-link">Blog</a>
-            </ul>
-            <ul class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </ul>
-            <ul class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </ul>
-    
-          </ul>
-          <button class="mlog" onclick="Signup()">Signup</button>
-          <!-------------------------------------------
-                            for mobile
-               -------------------------------------------->
-          <div class="mobile">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+  <!-------------navbar start ----------------------->
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo"><img src="iXSqNF.png" alt="" height="100px"></a>
+      <ul class="nav-item">
+        <a href="index.html" class="nav-link">Home</a>
+      </ul>
+      <ul class="nav-item">
+        <a href="blog.html" class="nav-link">Blog</a>
+      </ul>
+      <ul class="nav-item">
+        <a href="about.html" class="nav-link">About</a>
+      </ul>
+      <ul class="nav-item">
+        <a href="contact.html" class="nav-link">Contact</a>
+      </ul>
+
+      </ul>
+      <button class="mlog" onclick="Signup()">Signup</button>
+      <!-------------------------------------------
+                        for mobile
+           -------------------------------------------->
+      <div class="mobile">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+  </header>
+
+  <!------------------------------ 
+                form
+  ---------------------------->
+
+
+  <div class="box " id="myForm">
+    <div id="login">
+      <button class="closeForm" onclick="closeForm()"><img src="cross.png" alt="" height="25px" width="25px"></button>
+
+      <h2 class="heading">LOGIN</h2>
+      <form action="" class="form-container">
+
+        <div class="inputDiv">
+          <label for="email" class="email">Email</label>
+          <div class="userArea">
+            <i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" id="email"
+              placeholder="Type your Email-Id" required>
           </div>
-        </nav>
-    
-      </header>
-        <!------------------------------ 
-                    form
-      ---------------------------->
-    
-    
-      <div class="box " id="myForm">
-        <div id="login">
-          <button class="closeForm" onclick="closeForm()"><img src="cross.png" alt="" height="25px" width="25px"></button>
-    
-          <h2 class="heading">LOGIN</h2>
-          <form action="" class="form-container">
-    
-            <div class="inputDiv">
-              <label for="email" class="email">Email</label>
-              <div class="userArea">
-                <i class="fa fa-envelope" aria-hidden="true"></i><input type="text" name="email" id="email"
-                  placeholder="Type your Email-Id" required>
-              </div>
-              <hr>
-            </div>
-            <div class="inputDiv">
-              <label for="password" class="username">Password</label>
-              <div class="userArea">
-                <i class="fa-solid fa-key"></i><input type="password" name="password" id="password"
-                  placeholder="Type your password" required>
-              </div>
-              <hr>
-            </div>
-    
-            <span class="forgotPassword">Forgot password?</span>
-            <button class="btn" type="submit">Login</button>
-            <hr>
-            <div class="formBottom">
-              <p> login using</p>
-              <ul class="account">
-                <a href="" target="_blank">
-                  <li><i class="fa-brands fa-facebook-f"></i></li>
-                </a>
-                <a href="" target="_blank">
-                  <li><i class="fa-brands fa-twitter"></i></li>
-                </a>
-                <a href="https://www.google.com/" target="_blank">
-                  <li><i class="fa-brands fa-google"></i></li>
-                </a>
-              </ul>
-              <p class="signUp">Don't have account</p>
-              <a href="sign.html" target="_self" onclick="signin()">SIGN UP</a>
-            </div>
-    
-    
-          </form>
+          <hr>
+        </div>
+        <div class="inputDiv">
+          <label for="password" class="username">Password</label>
+          <div class="userArea">
+            <i class="fa-solid fa-key"></i><input type="password" name="password" id="password"
+              placeholder="Type your password" required>
+          </div>
+          <hr>
+        </div>
+
+        <span class="forgotPassword">Forgot password?</span>
+        <button class="btn" type="submit">Login</button>
+        <hr>
+        <div class="formBottom">
+          <p> login using</p>
+          <ul class="account">
+            <a href="" target="_blank">
+              <li><i class="fa-brands fa-facebook-f"></i></li>
+            </a>
+            <a href="" target="_blank">
+              <li><i class="fa-brands fa-twitter"></i></li>
+            </a>
+            <a href="https://www.google.com/" target="_blank">
+              <li><i class="fa-brands fa-google"></i></li>
+            </a>
+          </ul>
+          <p class="signUp">Don't have account</p>
+          <a href="sign.html" target="_self" onclick="signin()">SIGN UP</a>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+  <!-----------------------------------------------------------------
+                            navbar end
+  ------------------------------------------------------------------>
+  <div>
+    <h1>our mission</h1>
+  </div>
+  <div class="welfare">
+    <!-- card 1 -->
+    <div class="crd">
+      <img
+        src="https://res.cloudinary.com/saylani-welfare/image/upload/v1676274365/website-images/dynamic/b0abff1d-a3f9-49a7-9d58-273bbc735561.jpg"
+        class="card-img" alt="provide food" height="300px">
+
+      <h3 class="card-title">TO PrOVide fOOD</h3>
+      <p class="card-text">our mission is to provide food 1000ns of hungers of pakistan</p>
+      <button id="More" class="btn" onclick="readmore()">read more</button>
+      <div id="edu">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquam perferendis itaque laudantium
+          ipsam veniam quod dicta numquam vel placeat, hhdsdfsghdfdhs bndsbhfsh deleniti repellendus?</p>
+        <button id="less" class="btn" onclick="less()"> show less</button>
+      </div>
+    </div>
+
+
+    <!-- card 2 -->
+
+    <div class="crd">
+      <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646141210/website-images/static/6.jpg"
+        class="card-img" alt="provide food" height="300px">
+
+      <h3 class="card-title">TO PROVIDE EDUCATION</h3>
+      <p class="card-text">our mission is to provide equcation 1000ns of childrens of pakistan</p>
+      <button id="more" class="btn" onclick="Rmore()">read more</button>
+      <div id="con">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla
+        laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto quia.
+        Error?
+        <button class="btn" onclick="Sless()">show less</button>
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div class="crd">
+      <img src="https://www.shutterstock.com/image-vector/open-red-gift-box-confetti-260nw-499915549.jpg"
+        class="card-img" alt="provide food" height="500px">
+
+      <h3 class="card-title">WIN SURPRISE GIFT</h3>
+      <p class="card-text">be part of our website and enter right now to win lucky draw</p>
+      <button id="Read" class="btn" onclick="Read()">read more</button>
+      <div id="noc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla
+        laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto quia.
+        Error?
+        <button class="btn" onclick="Less()">show less</button>
+
+      </div>
+    </div>
+
+
+    <div class="crd">
+      <img src="https://png.pngtree.com/png-clipart/20200701/original/pngtree-big-sale-best-offer-png-image_5376766.jpg"
+        class="card-img" alt="provide food" height="300px">
+
+      <h3 class="card-title">BIG SAle</h3>
+      <p class="card-text">we HAVE A BIG AND GREAT SALES FOR YOU</p>
+
+      <button id="read" class="btn" onclick="read()">read more</button>
+      <div id="non">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla
+        laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto quia.
+        Error?
+        <button class="btn" onclick="show()">show less</button>
+
+      </div>
+    </div>
+    <div>
+      <button id="vie" class="btn" onclick="vie()">show MORE</button>
+
+    </div>
+    <div id="view">
+      <!--  card 4 -->
+      <div class="crd">
+        <img src="https://www.shutterstock.com/image-vector/open-red-gift-box-confetti-260nw-499915549.jpg"
+          class="card-img" alt="provide food" height="500px">
+
+        <h3 class="card-title">WIN SURPRISE GIFT</h3>
+        <p class="card-text">be part of our website and enter right now to win lucky draw</p>
+        <button id="Read" class="btn" onclick="Read()">read more</button>
+        <div id="noc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla
+          laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto
+          quia.
+          Error?
+          <button class="btn" onclick="Less()">show less</button>
+
         </div>
       </div>
-    <div>
-        <h1>our mission</h1>
+
+      <!--  card 4 -->
+      <div class="crd">
+        <img
+          src="https://media.istockphoto.com/id/1560142923/photo/online-shopping-modern-background-glowing-shopping-cart-icon-web3-colours-cgi-3d-render.jpg?s=612x612&w=0&k=20&c=UtUKPEK_F6nH2PboL_hc75D2drqJ0Tc3UwzzEhwvfRA="
+          class="card-img" alt="provide food" height="500px">
+
+        <h3 class="card-title">FREE DELIVERY</h3>
+        <p class="card-text">be part of our website and enter right now to win lucky draw</p>
+        <button id="Read" class="btn" onclick="Read()">read more</button>
+        <div id="noc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla
+          laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto
+          quia.
+          Error?
+          <button class="btn" onclick="Less()">show less</button>
+
+        </div>
+      </div>
+
+      <!--  card 4 -->
+      <div class="crd">
+        <img src="https://smartreader.edu.my/wp-content/uploads/2021/04/POSTER-300x300.jpg"
+          class="card-img" alt="provide food" height="500px">
+
+        <h3 class="card-title">KIDS LUCKY DRAW</h3>
+        <p class="card-text">be part of our website and enter right now to win lucky draw</p>
+        <button id="Read" class="btn" onclick="Read()">read more</button>
+        <div id="noc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla
+          laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto
+          quia.
+          Error?
+          <button class="btn" onclick="Less()">show less</button>
+
+        </div>
+      </div>
+      <!--  card 4 -->
+      <div class="crd">
+        <img src="https://cdn.stickersandthat.co.uk/wp-content/uploads/2022/01/Custom-Loyalty-Cards-Designed-Printed.jpg"
+          class="card-img" alt="provide food" height="500px">
+
+        <h3 class="card-title">loyality card</h3>
+        <p class="card-text">be part of our website and enter right now to win lucky draw</p>
+        <button id="Read" class="btn" onclick="Read()">read more</button>
+        <div id="noc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla
+          laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto
+          quia.
+          Error?
+          <button class="btn" onclick="Less()">show less</button>
+
+        </div>
+      </div>
+
     </div>
-    <div class="welfare">
-        <div class="crd" style="width: 26rem; border: 2px solid black;">
-            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1676274365/website-images/dynamic/b0abff1d-a3f9-49a7-9d58-273bbc735561.jpg"
-                class="card-img" alt="provide food" height="300px">
-            <div class="card-body">
-                <h3 class="card-title">TO PrOVide fOOD</h3>
-                <p class="card-text">our mission is to provide food 1000ns of hungers of pakistan</p>
-                <!-- <button onclick="readmore()">read more</button> -->
-            </div>
-
-
-
-
-            <div class="crd" style="width: 26rem; border: 2px solid black;">
-                <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646141210/website-images/static/6.jpg"
-                    class="card-img" alt="provide food" height="300px">
-                <div class="card-body">
-                    <h3 class="card-title">TO PROVIDE EDUCATION</h3>
-                    <p class="card-text">our mission is to provide equcation 1000ns of childrens of pakistan</p>
-                    <!-- <button onclick="readmore()">read more</button> -->
-                </div>
-                <!-- <div id="content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cum ut consectetur tempore similique, nulla laboriosam voluptates accusantium sequi. Nulla illo est architecto incidunt esse maxime cupiditate, iusto quia. Error?
-        </div> -->
-            </div>
-
-            <div class="crd" style="width: 26rem; border: 2px solid black;">
-                <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646140592/website-images/static/1.jpg"
-                    class="card-img" alt="provide food" height="300px">
-                <div class="card-body">
-                    <h3 class="card-title">TO PROVIDE HEALTHCARE</h3>
-                    <p class="card-text">our mission is to provide healthcare 1000ns of childrens of pakistan</p>
-                    <!-- <button onclick="readmore()">read more</button> -->
-                </div>
-
-            </div>
-
-            <div class="crd" style="width: 28rem; border: 2px solid black;">
-                <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1646497311/website-images/static/24.jpg"
-                    class="card-img" alt="provide food" height="300px">
-                <div class="card-body">
-                    <h3 class="card-title">TO TEACH SKILL</h3>
-                    <p class="card-text">our mission is to teach skill 1000ns of childrens of pakistan</p>
-                    <!-- <button onclick="readmore()">read more</button> -->
-                </div>
-            </div>
-        </div>
-        <div style="background-color: rgb(77, 75, 75);"></div>
-        <div style="width: 30rem; border: 2px solid black;">
-            <img src="https://res.cloudinary.com/saylani-welfare/image/upload/v1648318863/website-images/static/95.jpg"
-                alt class="testimonial_image" height="300px">
-
-            <h4 class="ant-typography heading_english undefined">Arshad Wali Muhammad</h4>
-            <span class="ant-typography text_english theme_grey_light">"("
-                "Group Director, Gerry’s Group" ")"
-            </span><br>
-
-            <span class="ant-typography text_english normal_text">Saylani Welfare Trust is a name that needs no
-                introduction
-                today. The journey this team embarked upon was made possible owing to their zeal, enthusiasm &
-                commitment to
-                the society and by the grace of Allah (SWT), it has become a name that we need and not just the one
-                we want.
-                I wish Saylani’s team all the success and blessing that they deserve for future, May God bless
-                Saylani and
-                ensure prosperity and happiness for our people, Ameen!</span>
-        </div>
-</div>
-        
     <!--------------------------------------
          start of footer
     ----------------------------------------->
 
     <div class="footer-section">
-        <div>
-          <img src="iXSqNF.png" alt="">
-        </div>
-        <div class="footer-item">
-            <h2>Company</h2>
-            <p><a href=""> About Us</a></p>
-            <p><a href=""> Contact Us</a></p>
-            <p><a href=""> Our Services</a></p>
-            <p><a href=""> Privacy Policy</a></p>
-        </div>
-        <div class="footer-item">
-            <h2>Get Help </h2>
-            <p><a href=""> FAQ</a></p>
-            <p><a href=""> Shipping </a></p>
-            <p><a href=""> Retuns </a></p>
-            <p><a href=""> Payment Options </a></p>
-        </div>
-        <div class="footer-item">
-            <h2>Online Shop</h2>
-            <p><a href=""> Blogs </a></p>
-            <p><a href=""> Watch </a></p>
-            <p><a href=""> Shoes </a></p>
-            <p><a href=""> Bress </a></p>
-        </div>
-        <div class="footer-item social">
-            <h2> Follow Us </h2>
-            <ul>
-                <li> <i class="fa-brands fa-instagram"></i> </li>
-                <li> <i class="fa-brands fa-linkedin-in"></i> </li>
-                <li> <i class="fa-brands fa-youtube"></i> </li>
-                <li> <i class="fa-brands fa-twitter"></i> </li>
-            </ul>
-        </div>
+      <div>
+        <img src="iXSqNF.png" alt="">
+      </div>
+      <div class="footer-item">
+        <h2>Company</h2>
+        <p><a href="about.html"> About Us</a></p>
+        <p><a href="contact.html"> Contact Us</a></p>
+        <p><a href="index.html"> Our Services</a></p>
+        <p><a href=""> Privacy Policy</a></p>
+      </div>
+      <div class="footer-item">
+        <h2>Get Help </h2>
+        <p><a href=""> FAQ</a></p>
+        <p><a href=""> Shipping </a></p>
+        <p><a href=""> Retuns </a></p>
+        <p><a href=""> Payment Options </a></p>
+      </div>
+      <div class="footer-item">
+        <h2>Online Shop</h2>
+        <p><a href="blog.html"> Blogs </a></p>
+        <p><a href=""> Watch </a></p>
+        <p><a href=""> Shoes </a></p>
+        <p><a href=""> Bress </a></p>
+      </div>
+      <div class="footer-item social">
+        <h2> Follow Us </h2>
+        <ul>
+          <li> <i class="fa-brands fa-instagram"></i> </li>
+          <li> <i class="fa-brands fa-linkedin-in"></i> </li>
+          <li> <i class="fa-brands fa-youtube"></i> </li>
+          <li> <i class="fa-brands fa-twitter"></i> </li>
+        </ul>
+      </div>
     </div>
+
     <!---------------------------------------
-                 end of footer 
-    -------------------------------------->
+               end of footer 
+  -------------------------------------->
+    <script>
+      function readmore() {
+        document.getElementById('edu').style.display = "block";
+        document.getElementById('More').style.display = "none";
+
+      }
+
+      function less() {
+        document.getElementById('edu').style.display = "none";
+        document.getElementById('More').style.display = "block";
+      }
+      // -----------for 2nd div -----------------------//
+      function Rmore() {
+        document.getElementById('con').style.display = "block";
+        document.getElementById('more').style.display = "none";
+
+      }
+
+      function Sless() {
+        document.getElementById('con').style.display = "none";
+        document.getElementById('more').style.display = "block";
+      }
+      // -----------for 3rd div -----------------------//
+      function Read() {
+        document.getElementById('noc').style.display = "block";
+        document.getElementById('Read').style.display = "none";
+
+      }
+
+      function Less() {
+        document.getElementById('noc').style.display = "none";
+        document.getElementById('Read').style.display = "block";
+      }
+      // -----------for 4rd div -----------------------//
+      function read() {
+        document.getElementById('non').style.display = "block";
+        document.getElementById('read').style.display = "none";
+
+      }
+
+      function show() {
+        document.getElementById('non').style.display = "none";
+        document.getElementById('read').style.display = "block";
+      }
+      // -----------for show more button -----------------------//
+      function vie() {
+        document.getElementById('view').style.display = "block";
+        document.getElementById('vie').style.display = "none";
+
+      }
 
 
-        <script>
-            function readmore() {
-                document.getElementById(content).style.display = "block"
-            }
-
-        </script>
+    </script>
 
 
-<!-- for nav -->
-<script src="index.js"></script>
+    <!-- for nav -->
+    <script src="index.js"></script>
 </body>
 
 </html>
